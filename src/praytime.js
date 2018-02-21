@@ -7,7 +7,10 @@ import config from './config/salatConfig';
 
 @inject(HttpClient)
 export class praytime {
-    heading = "Prayer time based from your location.";
+    heading = "Prayer time for ";
+    location = "loading...";
+    timings = {};
+    today = moment().format("MMM Do YY");
 
     constructor(httpClient) {
         
@@ -31,7 +34,7 @@ export class praytime {
             this.client.fetch(this.composeLocationUrl(coordinate))
                 .then(response => response.json())
                 .then(responseData => {
-                    this.message = responseData.display_name;
+                    this.location = responseData.display_name;
                 });
 
             this.client.fetch(this.composePrayTimeUrl(coordinate))
