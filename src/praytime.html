@@ -1,11 +1,15 @@
 <template>
-    <h1>${heading} ${location}</h1>
-    <h2>${today}</h2>
-    <div>
-        Fajr: ${timings.Fajr} <br/>
-        Dhuhr: ${timings.Dhuhr} <br/>
-        Asr: ${timings.Asr} <br/>
-        Maghrib: ${timings.Maghrib} <br/>
-        Isha: ${timings.Isha} <br/>
-    </div>
+    <section class="au-animate">
+        <h1>${today}</h1>
+        <div class="col-md-4 well" style="text-align:justify">
+            <h4>Fajr: ${timings.Fajr}</h4>
+            <h4>Dhuhr: ${timings.Dhuhr}</h4>
+            <h4>Asr: ${timings.Asr}</h4>
+            <h4>Maghrib: ${timings.Maghrib}</h4>
+            <h4>Isha: ${timings.Isha}</h4>
+        </div>
+        <div class="col-md-6" style="text-align:right">
+            <h3>${heading} ${location} </h3>
+        </div>
+    </section>
 </template>

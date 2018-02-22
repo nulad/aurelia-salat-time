@@ -10,10 +10,11 @@ export class praytime {
     heading = "Prayer time for ";
     location = "loading...";
     timings = {};
-    today = moment().format("MMM Do YY");
 
     constructor(httpClient) {
-        
+        this.updateClock();
+        setInterval(() => this.updateClock(), 1000);
+
         httpClient.configure(config => {
             config
                 .useStandardConfiguration()
@@ -51,6 +52,10 @@ export class praytime {
         }, () => {
             return 'no geo';
         });
+    }
+
+    updateClock() {
+        this.today = moment().format('lll');
     }
 
     composePrayTimeUrl(coordinate) {

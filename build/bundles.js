@@ -30,7 +30,9 @@ module.exports = {
         "bootstrap",
         "bootstrap/css/bootstrap.css!text",
         "fetch",
-        "jquery"
+        "jquery",
+        "moment",
+        "min-url"
       ],
       "options": {
         "inject": true,
