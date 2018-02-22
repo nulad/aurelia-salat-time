@@ -1,5 +1,5 @@
 # Aurelia Muslim Prayer Time
-based from [Aurelia Skeleton](https://github.com/aurelia/skeleton-navigation) and inspired by [this][https://github.com/widatama/salat-time]
+based from [Aurelia Skeleton](https://github.com/aurelia/skeleton-navigation) and inspired by [this](https://github.com/widatama/salat-time)
 ## Running The App
 
 To run the app, follow these steps.
